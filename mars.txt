@@ -1,0 +1,84 @@
+/* IMPORTANT: Multiple classes and nested static classes are supported */
+
+/*
+ * uncomment this if you want to read input.
+//imports for BufferedReader
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
+//import for Scanner and other utility  classes
+import java.util.*;
+*/
+import java.util.*;
+class TestClass {
+    public static void main(String args[] ) throws Exception {
+        /*
+         * Read input from stdin and provide input before running
+         * Use either of these methods for input
+
+        //BufferedReader
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        String line = br.readLine();
+        int N = Integer.parseInt(line);
+
+        //Scanner
+        Scanner s = new Scanner(System.in);
+        int N = s.nextInt();
+
+        for (int i = 0; i < N; i++) {
+            System.out.println("hello world");
+        }
+        */
+           Scanner sc = new Scanner(System.in);
+           while(sc.hasNextLine())
+{
+int n,s,w;
+String e;
+int x,y,x1,y1;
+x=sc.nextInt();
+y=sc.nextInt();
+e=sc.next();
+sc.nextLine();
+String d=sc.nextLine();
+for(int i=0;i<d.length();i++)
+{
+if(d.charAt(i)=='L')
+{
+if(e.charAt(0)=='N')
+e="W";
+else if(e.charAt(0)=='W')
+e="S";
+else if(e.charAt(0)=='S')
+e="E";
+else
+e="N";
+}
+else if(d.charAt(i)=='R')
+{
+if(e.charAt(0)=='N')
+e="E";
+else if(e.charAt(0)=='W')
+e="N";
+else if(e.charAt(0)=='S')
+e="W";
+else 
+e="S";
+}
+else
+{
+if(e.charAt(0)=='N')
+y++;
+else if(e.charAt(0)=='W')
+x--;
+else if(e.charAt(0)=='E')
+x++;
+else
+y--;
+}
+}
+System.out.println(x+" "+y+" "+e);
+
+    
+    }
+}
+}
